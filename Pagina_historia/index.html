@@ -1,73 +1,49 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+         <!--
+         /\                     #######    ####    #####    #####            #####    #######  ####              ######    #####    #####   #####   ##   ##  #######            ######    #####   ######    #####                      /\
+        /**\                     ##   #   ##  ##  ##   ##  ##   ##            ## ##    ##   #   ##                ##  ##  ##   ##  ##   ## ##   ##  ##   ##   ##   #            ##  ##   ##   ##  # ## #   ##   ##                    /**\             
+       /****\                    ## #    ##       ##   ##  #                  ##  ##   ## #     ##                ##  ##  ##   ##  #       ##   ##  ##   ##   ## #              ## ##    ##   ##    ##     ##   ##                   /****\
+      /******\                   ####    ##       ##   ##   #####             ##  ##   ####     ##                #####   ##   ##   #####  ##   ##  ##   ##   ####              #####    ##   ##    ##     ##   ##                  /******\
+     /********\                  ## #    ##       ##   ##       ##            ##  ##   ## #     ##   #            ##  ##  ##   ##       ## ##   ##  ##   ##   ## #              ## ##    ##   ##    ##     ##   ##                 /********\ 
+    /**********\                 ##   #   ##  ##  ##   ##  ##   ##            ## ##    ##   #   ##  ##            ##  ##  ##   ##  ##   ## ##  ###  ##   ##   ##   #            ##  ##   ##   ##    ##     ##   ##                /**********\                  
+        ||||                    #######    ####    #####    #####            #####    #######  #######           ######    #####    #####   #####    #####   #######            #### ##   #####    ####     #####                     ||||                    
+        ||||                                                                                                                                                                                                                          ||||             
+-->
+    <link rel="stylesheet" href="styles.css"><meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lore Principal - Tu Nueva Web</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Un juego que marcará la diferencia, la oscuridad y el tiempo se vuelven uno sólo">
+    <title>Ecos del Bosque Roto</title>
 </head>
 <body>
-
-    <div class="lore">
-        <h2>Lore principal</h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, doloremque? Dolorum, 
-            explicabo in! Labore debitis nihil perspiciatis quae sint,DANI ACEITOSO temporibus, natus adipisci 
-            distinctio, itaque ab earum omnis. Minima, asperiores magnam! Eos, esse ad. Ad, tempora!
-            <br><br><!-- le meto dos salto de linea, si quiero más, añado -->
-            Commodi, explicabo omnis? Sed, velit! Commodi, dolor. Temporibus facilis eveniet 
-            necessitatibus natus, amet totam quisquam sint cumque at! Accusamus rem voluptate 
-            eligendi esse. Quos dignissimos cumque, voluptatem eaque sed iusto dolore nisi vel, 
-            autem est!
-        </p>
+<div class="contenedor-cabecera">
+    <h1>Ecos del Bosque Roto</h1>
+    <div class="menu-principal"> 
+    <a href="creadores/index.html" target="_blank" class="enlace-menu">CREADORES</a>
+    <!-- target _blank te da acceso a una nueva página -->
+    <a href="historia/index.html" target="_blank" class="enlace-menu">HISTORIA DEL JUEGO</a>   
+    <div class="dropdown">
+            <a href="#" class="enlace-menu">RECURSOS</a>
+                <div class="dropdown-content">
+                    <a href="flujo/index.html">Diagrama de flujo</a>
+                    <a href="base/index.html">Diagrama de entidad-relacion</a>
+                </div>
     </div>
-
-    <div class="contenedor-video">
-        <video controls width="800">
-            <source src="/Pagina_historia/videos/videoentero.mp4" type="video/mp4">
-            Tu navegador no soporta la etiqueta de video.
-            <!-- mensaje de reserva por si no se le abre el video -->
-        </video>
-    </div>
-
-    <div class="titulo-carousel">Escenas del juego</div>
-    <div id="carousel-container">
-        <img id="carousel" src="fotos/otra.png"/>
-    </div>
-    <div style="margin-top: 20px;">
-        <button onclick="anterior()">←</button>
-        <button onclick="siguiente()">→</button>
-    </div>
-
-    <script>
-        // javascript
-        var numero = 1
-        function siguiente(){
-            numero++
-            if(numero == 10){numero = 1}
-            document.getElementById("carousel").src="fotos/otra"+numero+".png"
-        }
-
-        function anterior(){
-            numero--
-            if(numero == 0){numero = 9}
-            document.getElementById("carousel").src="fotos/otra"+numero+".png"
-        }
-        
-            // Una vez que JavaScript tiene el elemento "carousel(la propia img)" seleccionado, este punto (.) 
-                // le indica que quieres acceder específicamente a su propiedad src, 
-                // que es donde se define la ruta del archivo de la imagen.
-            // Código: = "otra" + numero + ".png"
-                // Igual (=) para asignar un nuevo valor a la propiedad src.
-                // El valor se construye usando la concatenación de cadenas (unión de texto):
-                // Toma la palabra "otra".
-                // Le añade el valor de la variable numero (que ya fue incrementado o decrementado, por ejemplo, si es 3).
-                // Le añade la extensión del archivo ".png".
-                // Ejemplo: Si la variable numero vale 3, la expresión se convierte en: "otra" + 3 + ".png", lo que resulta en la cadena "png3.jpg".
-    </script>
+    <div class="dropdown">
+            <a href="#" class="enlace-menu">CÓDIGO</a>
+                <div class="dropdown-content">
+                    <a href="prueba.zip" download>>Descargar código</a>
+                </div>
+        </div>
+    </div> 
+</div>
+<div class="contenedor-principal"> 
+    <img class="portada" src="fotos/portada.png" alt="Arte de portada para Ecos del Bosque Roto"
+    />
+</div>
 <footer>
-   © 2025 Alex, Dani y Miguel Xtart. Todos los derechos reservados.
-</footer>    
+ © 2025 DAM Xtart. Todos los derechos reservados.
+ </footer>
 </body>
 </html>

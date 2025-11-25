@@ -1,11 +1,11 @@
 body {
     
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to bottom right,#0D1B2A,#300a47,#0D1B2A);
+    background: linear-gradient(to bottom right,#0D1B2A, #300a47,  #0D1B2A  );
     color: #ffffff; 
     display: flex;
     flex-direction: column;
-    /* Todos los elementos se sitÃºan como una columna y se centran */
+    /* Todos los elementos se sitúan como una columna y se centran */
     align-items: center;
     min-height: 100vh; 
    /* Asegura que el body ocupe el 100% de la altura de la pantalla y asi el footer va abajo*/
@@ -25,7 +25,7 @@ body {
 /* Estilos del h1:titulo */
 h1 {
     font-family:fantasy; 
-    color: #08e576; /* TÃ­tulo en neÃ³n */
+    color: #08e576; /* Título en neón */
      text-shadow: 0 0 10px #e027e6;
      /*(horizontal, vertical, desenfoque) */
     margin: 0;
@@ -42,7 +42,7 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 30px; 
-    /* AÃ±ade a cada elemento hijo(los enlaces) espacio entre ellos */
+    /* Añade a cada elemento hijo(los enlaces) espacio entre ellos */
     padding-top: 10px;
 }
 
@@ -61,27 +61,35 @@ h1 {
     color: #61ffb5; 
     text-shadow: 0 0 8px #e027e6; 
     transform: scale(1.1); 
-    /* el elemento debe agrandarse un 10% (110% de su tamaÃ±o original). */
+    /* el elemento debe agrandarse un 10% (110% de su tamaño original). */
 }
 
 /* Estilos del contenedor que tiene la imagen */
 .contenedor-principal { 
-    flex-grow: 1;
     display: flex;
     justify-content: center;
-    align-items: flex-start; 
-   margin-bottom: 40px;
+    max-width: 1200px; 
+    /* que tenga buen espacio para la imagen */
+    width: 90%; 
+    /* Asegura que no ocupa el 100% en pantallas muy grandes */
+    margin-bottom: 40px;
    /* Que se distancia del footer */
 }
 /* Estilo imagen */
 .portada {
     display: block;
+    width: 100%; 
+    height: auto; 
+    /* La altura se ajusta automáticamente para mantener la proporción original */
+    max-width: 800px;
+    /* un máximo para que no se enorme */    
+    object-fit: contain; 
+    /* asegura que la imagen se vea entera(de cara al movil) */
     border: 2px solid #00FF80; 
     box-shadow: 0 0 20px rgba(48, 10, 71, 0.8), 
                 0 0 50px rgba(0, 255, 128, 0.4); 
     border-radius: 10px;
-    object-fit: cover;
-    /* Asegura que la imagen se ajustal contenedor, la expande o recorta si es necesario */
+    
 }
 
 /* DESPLEGABLES(CONTROLA TODOS(Al ser la misma clase)) */
@@ -89,23 +97,21 @@ h1 {
 /*Prepara el contenedor del desplegable (el enlace "padre") */
 .dropdown {
     position: relative; 
-    /* El submenÃº se posicionarÃ¡ con respecto a este div, ya que serÃ¡ absolute. */
-   
+    /* El submenú se posicionará con respecto a este div, ya que será absolute. */
     
 }
 
-/* 2. Estilo y ocultaciÃ³n del desplegable (el submenÃº) */
+/* 2. Estilo y ocultación del desplegable (el submenú) */
 .dropdown-content {
     display: none; 
     /* Oculta el contenido por defecto hasta que pases por ecncima*/
     position: absolute; 
     /* Lo coloca justo debajo del div padre (dropdown) */
-  
     background-color: #183452;  
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     width: 160px; 
     /* Ancho para que quepan los textos, sino, el texto sale mal colocado */
-    box-shadow: 0 5px 8px 0 #61ffb5; 
+    box-shadow: 0 5px 8px 0 #61ffb5; ;
     /* Sombra*/
 }
 
@@ -120,23 +126,23 @@ h1 {
     conviertes enlaces horizontales en verticales y de ancho completo */ 
 }
 
-/* 4. Efecto de pasar el ratÃ³n por los enlaces del submenÃº */
+/* 4. Efecto de pasar el ratón por los enlaces del submenú */
 .dropdown-content a:hover {
     background-color: rgba(65, 15, 95, 0.8); 
     /* Morado al hacer hover */
 }
 
-/*Para mostrar el desplegable que estÃ¡ oculto */
+/*Para mostrar el desplegable que está oculto */
 .dropdown:hover .dropdown-content {
     display: block;
 }
  /*El espacio en blanco entre :hover y .dropdown-content es un selector descendente.
-     Significa: "selecciona cualquier elemento que estÃ© dentro del elemento anterior".*/
+     Significa: "selecciona cualquier elemento que esté dentro del elemento anterior".*/
      /*Es decir:
-     Cuando el ratÃ³n estÃ© sobre el elemento .dropdown, 
-     busca y aplica el estilo(block(que se vea)) al elemento .dropdown-content (el submenÃº) que se encuentra dentro de Ã©l."*/
+     Cuando el ratón esté sobre el elemento .dropdown, 
+     busca y aplica el estilo(block(que se vea)) al elemento .dropdown-content (el submenú) que se encuentra dentro de él."*/
 
-/* Estilo pie de pÃ¡gina */
+/* Estilo pie de página */
 footer {
     width: 100%;
     text-align: center;
