@@ -1,0 +1,121 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient( to bottom right,#0D1B2A,  #300a47, #0D1B2A );
+    color: #ffffff; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Ponemos todo el contenido centrado uno debajo de otro */
+    padding-top: 30px; 
+   min-height: 100vh; 
+   /* Asegura que el body ocupe el 100% de la altura de la pantalla y asi el footer va abajo*/
+}
+
+h2 {
+    /*titulo del lore*/
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #08e576; /* TÃ­tulo en neÃ³n (verde) */
+    text-shadow: 0 0 10px #e027e6; 
+    margin: 0;
+    /* margen superio reducido */
+    font-size: 2em;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.lore {
+    /* Contenedor para la secciÃ³n de ore, para centrar y dar un ancho */
+    width: 80%;
+    /* que no ocupe todo el ancho, asi mas visual */
+    padding: 20px;
+    /* distancia al borde del contenedor */
+    background-color: rgba(13, 27, 42, 0.7); 
+    border: 2px solid #00FF80; 
+    border-radius: 10px;
+    margin-bottom: 40px;
+    /* distancia con el video */
+    text-align: justify;
+    /* para que quede justificado y bonito */
+}
+
+.contenedor-video {
+    width: 70%;
+    /* que se vea al 70% el recuadro */
+    display: flex;
+    justify-content: center;
+    margin-bottom:40px;
+    /* distancia con fotos */
+}
+
+video {
+    display: block;
+    /* que salga de primeras */
+    max-width: 100%;
+    height: auto;
+    /* que el ancho se ajuste al cotenedor padre y
+    la altura se calcula en base a eso para no deformarse */
+    border: 2px solid #00FF80; 
+    box-shadow: 0 0 20px #e027e6;
+    border-radius: 10px;
+}
+
+
+/*  texto del carrusel */
+.titulo-carousel {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    color: #ffffff;
+    text-shadow: 0 0 15px #00FF80; 
+}
+#carousel-container {
+    text-align: center;
+}
+
+#carousel {
+    height: 370px;
+    width: 370px; 
+    /* tamaÃ±o de las imagenes */
+    object-fit: cover; 
+    /* Asegura que la imagen se vea bien en el cÃ­rculo */
+    border-radius: 5%;
+    border: 2px solid #27b3e6c8;
+    box-shadow: 0 0 15px #08e576;
+}
+
+button {
+    background-color: #300a47; 
+    color: #00FF80; 
+    border: 2px solid #08e576;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    padding: 5px;
+    border-radius: 10px; 
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    /* seguimos con los mismos tiempos */
+}
+
+button:hover {
+    background-color: #00FF80; 
+    color: #0D1B2A; 
+    transform: scale(1.1);
+    /* que pase a un 110% */
+    box-shadow: 0 0 10px #08e576;
+}
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #0D1B2A; 
+    border-top: 2px solid #00FF80; 
+    color: #90A4AE; 
+    font-size: 0.9em;
+    margin-top: auto
+    /* esto hace que el footer se ajuste al body, 
+    que le hemos puesto un 100% y asi el footer va abajo */
+}

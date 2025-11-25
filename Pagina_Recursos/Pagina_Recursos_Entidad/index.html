@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama Entidad-Relación</title>
+    
+    <style>
+       
+        body {
+            background: linear-gradient(to bottom, #0D1B2A, #300a47, #12273d);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            /* Asegura que el body ocupe el 100% de la altura de la pantalla y asi el footer va abajo*/
+            margin: 0;
+            /* Asegura que no haya márgenes, asi se ve grande */
+        }
+
+        /* Contenedor principal*/
+        .contenedor{
+            width: 92%; 
+            /* Ocupa casi todo el ancho para que el diagrama se vea grande */
+            padding: 25px;
+            margin: auto; 
+            /* Centra el contenedor horizontalmente ya que ajusta los margenes solo*/
+            text-align: center;
+        }
+
+        .titulo{
+            width: 100%;
+            text-align: center;
+            color: #00FF80;
+            font-size: clamp(1.8em, 5vw, 2.8em); /* Fuente responsiva */
+            margin-top: 20px;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px #e027e6;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        /* Estilos para la imagen del diagrama */
+        .imagen{
+            /* Usamos max-width y height: auto para asegurar que la imagen es responsiva */
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #00fff7;
+            box-shadow: 0 0 20px rgba(0, 255, 128, 0.5);
+        }
+
+        
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            background-color: #0D1B2A;
+            border-top: 2px solid #00FF80;
+            color: #90A4AE;
+            font-size: 0.9em;
+            margin-top: auto; 
+            /* esto hace que el footer se ajuste al body, 
+            que le hemos puesto un 100% y asi el footer va abajo */
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1 class="titulo">Diagrama Entidad-Relación</h1>
+        <div>
+            <img class="imagen" src="entidad.png">
+        </div>
+    </div>
+
+    <footer>
+        © 2025 Alex, Dani y Miguel Xtart. Todos los derechos reservados.
+    </footer>
+</body>
+</html>

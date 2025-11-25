@@ -1,0 +1,151 @@
+body {
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right,#0D1B2A,#300a47,#0D1B2A);
+    color: #ffffff; 
+    display: flex;
+    flex-direction: column;
+    /* Todos los elementos se sitÃºan como una columna y se centran */
+    align-items: center;
+    min-height: 100vh; 
+   /* Asegura que el body ocupe el 100% de la altura de la pantalla y asi el footer va abajo*/
+    
+}
+/* Estilos del contenedor de la cabecera */
+.contenedor-cabecera { 
+    background-color: rgba(13, 27, 42, 0.8); 
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    /* El espacio que me genera para a imagen */
+    border-bottom: 2px solid #00FF80;
+    /* El borde de debajo del encabezado */
+}
+/* Estilos del h1:titulo */
+h1 {
+    font-family:fantasy; 
+    color: #08e576; /* TÃ­tulo en neÃ³n */
+     text-shadow: 0 0 10px #e027e6;
+     /*(horizontal, vertical, desenfoque) */
+    margin: 0;
+    /*que este pegado al siguiente elemento*/
+    padding: 10px;
+    font-size: 2.5em;
+    letter-spacing: 3px;
+    /* Espacio entre letras */
+}
+
+/* Estilos para el menu de enlaces*/
+
+.menu-principal {
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    /* AÃ±ade a cada elemento hijo(los enlaces) espacio entre ellos */
+    padding-top: 10px;
+}
+
+.enlace-menu {
+    color: #ffffff; 
+    text-decoration: none;
+    /* sin linea del enlace */
+    font-weight: bold;
+    /* negrita */
+    transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+    /* la transition hace que el cambio(del hover) no sea instantaneo y ocurra en 0,3seg */
+    letter-spacing: 1px;
+}
+
+.enlace-menu:hover {
+    color: #61ffb5; 
+    text-shadow: 0 0 8px #e027e6; 
+    transform: scale(1.1); 
+    /* el elemento debe agrandarse un 10% (110% de su tamaÃ±o original). */
+}
+
+/* Estilos del contenedor que tiene la imagen */
+.contenedor-principal { 
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+   margin-bottom: 40px;
+   /* Que se distancia del footer */
+}
+/* Estilo imagen */
+.portada {
+    display: block;
+    border: 2px solid #00FF80; 
+    box-shadow: 0 0 20px rgba(48, 10, 71, 0.8), 
+                0 0 50px rgba(0, 255, 128, 0.4); 
+    border-radius: 10px;
+    object-fit: cover;
+    /* Asegura que la imagen se ajustal contenedor, la expande o recorta si es necesario */
+}
+
+/* DESPLEGABLES(CONTROLA TODOS(Al ser la misma clase)) */
+
+/*Prepara el contenedor del desplegable (el enlace "padre") */
+.dropdown {
+    position: relative; 
+    /* El submenÃº se posicionarÃ¡ con respecto a este div, ya que serÃ¡ absolute. */
+   
+    
+}
+
+/* 2. Estilo y ocultaciÃ³n del desplegable (el submenÃº) */
+.dropdown-content {
+    display: none; 
+    /* Oculta el contenido por defecto hasta que pases por ecncima*/
+    position: absolute; 
+    /* Lo coloca justo debajo del div padre (dropdown) */
+  
+    background-color: #183452;  
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 160px; 
+    /* Ancho para que quepan los textos, sino, el texto sale mal colocado */
+    box-shadow: 0 5px 8px 0 #61ffb5; 
+    /* Sombra*/
+}
+
+/* 3. Estilo de los enlaces del desplegable*/
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    /*quito la linea de enlace*/
+    display: block; 
+   /* Para que cada enlace ocupe todo el ancho  del contenedor y se pongan de arriba a abajo
+    conviertes enlaces horizontales en verticales y de ancho completo */ 
+}
+
+/* 4. Efecto de pasar el ratÃ³n por los enlaces del submenÃº */
+.dropdown-content a:hover {
+    background-color: rgba(65, 15, 95, 0.8); 
+    /* Morado al hacer hover */
+}
+
+/*Para mostrar el desplegable que estÃ¡ oculto */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+ /*El espacio en blanco entre :hover y .dropdown-content es un selector descendente.
+     Significa: "selecciona cualquier elemento que estÃ© dentro del elemento anterior".*/
+     /*Es decir:
+     Cuando el ratÃ³n estÃ© sobre el elemento .dropdown, 
+     busca y aplica el estilo(block(que se vea)) al elemento .dropdown-content (el submenÃº) que se encuentra dentro de Ã©l."*/
+
+/* Estilo pie de pÃ¡gina */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background-color: #0D1B2A; 
+    border-top: 2px solid #00FF80; 
+    color: #90A4AE; 
+    margin-top: auto
+    /* esto hace que el footer se ajuste al body, 
+    que le hemos puesto un 100% y asi el footer va abajo */
+}
+

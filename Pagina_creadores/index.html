@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creadores</title>
+</head>
+<body>
+
+    <div class="contenedor-creadores">
+        <h2 class="titulo-seccion">Nuestros Creadores</h2>
+        <!-- TARJETA ALEX -->
+        <div class="tarjeta-creador"
+            onmouseenter="document.getElementById('img-alex').src='Alex.gif'" 
+            onmouseleave="document.getElementById('img-alex').src='pixel Alex.png'">
+            <!-- funciones principales para controlar el gif y la imagen -->
+            <img id="img-alex" class="imagen-creador" src="pixel Alex.png" alt="Alex">
+            <h3 class="nombre-creador">Alex</h3>
+            <p class="descripcion-creador">
+                El cerebro del equipo🧠.<br>
+                Guionista y creador de la Historia.<br>
+                Desarrolló el lore y los diálogos que dan vida al universo del juego.
+            </p>
+        </div>
+        <!-- TARJETA DANI -->
+        <div class="tarjeta-creador" 
+             onmouseenter="document.getElementById('img-dani').src='Dani.gif'" 
+             onmouseleave="document.getElementById('img-dani').src='pixel dani.png'">
+            <img id="img-dani" class="imagen-creador" src="pixel dani.png" alt="Dani">
+            <h3 class="nombre-creador">Dani</h3>
+            <p class="descripcion-creador">
+                Programador principal💻.<br>
+                Responsable de la lógica del juego.<br>
+                Es el rey de los while. Se pasa más tiempo en los bucles que en su casa.
+            </p>
+        </div>
+        <!-- TARJETA MIGUEL -->
+        <div class="tarjeta-creador"
+        onmouseenter="document.getElementById('img-miguel').src='Miguel.gif'" 
+             onmouseleave="document.getElementById('img-miguel').src='pixel Miguel.png'">
+            <img id="img-miguel" class="imagen-creador" src="pixel Miguel.png" alt="Miguel">
+            <h3 class="nombre-creador">Miguel</h3>
+            <p class="descripcion-creador">
+                 Diseñador y artista web🎨.<br> <!--br es salto de línea -->
+                Dale una idea y él te lo pinta. <br>
+                Creó la estética oscura y la estructura de los entornos del Bosque Roto ☘.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 Alex, Dani y Miguel Xtart. Todos los derechos reservados.
+    </footer>
+
+</body>
+</html>
