@@ -1,157 +1,148 @@
+
 body {
-    
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to bottom right,#0D1B2A, #300a47,  #0D1B2A  );
+    background: linear-gradient( to bottom right,#0D1B2A,  #300a47, #0D1B2A );
     color: #ffffff; 
     display: flex;
     flex-direction: column;
-    /* Todos los elementos se sitúan como una columna y se centran */
     align-items: center;
-    min-height: 100vh; 
+    /* Ponemos todo el contenido centrado uno debajo de otro */
+    padding-top: 30px; 
+   min-height: 100vh; 
    /* Asegura que el body ocupe el 100% de la altura de la pantalla y asi el footer va abajo*/
-    
-}
-/* Estilos del contenedor de la cabecera */
-.contenedor-cabecera { 
-    background-color: rgba(13, 27, 42, 0.8); 
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 40px;
-    /* El espacio que me genera para a imagen */
-    border-bottom: 2px solid #00FF80;
-    /* El borde de debajo del encabezado */
-}
-/* Estilos del h1:titulo */
-h1 {
-    font-family:fantasy; 
-    color: #08e576; /* Título en neón */
-     text-shadow: 0 0 10px #e027e6;
-     /*(horizontal, vertical, desenfoque) */
-    margin: 0;
-    /*que este pegado al siguiente elemento*/
-    padding: 10px;
-    font-size: 2.5em;
-    letter-spacing: 3px;
-    /* Espacio entre letras */
 }
 
-/* Estilos para el menu de enlaces*/
-
-.menu-principal {
-    display: flex;
-    justify-content: center;
-    gap: 30px; 
-    /* Añade a cada elemento hijo(los enlaces) espacio entre ellos */
-    padding-top: 10px;
-}
-
-.enlace-menu {
-    color: #ffffff; 
-    text-decoration: none;
-    /* sin linea del enlace */
-    font-weight: bold;
-    /* negrita */
-    transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
-    /* la transition hace que el cambio(del hover) no sea instantaneo y ocurra en 0,3seg */
-    letter-spacing: 1px;
-}
-
-.enlace-menu:hover {
-    color: #61ffb5; 
-    text-shadow: 0 0 8px #e027e6; 
-    transform: scale(1.1); 
-    /* el elemento debe agrandarse un 10% (110% de su tamaño original). */
-}
-
-/* Estilos del contenedor que tiene la imagen */
-.contenedor-principal { 
-    display: flex;
-    justify-content: center;
-    max-width: 1200px; 
-    /* que tenga buen espacio para la imagen */
-    width: 90%; 
-    /* Asegura que no ocupa el 100% en pantallas muy grandes */
-    margin-bottom: 40px;
-   /* Que se distancia del footer */
-}
-/* Estilo imagen */
-.portada {
-    display: block;
-    width: 100%; 
-    height: auto; 
-    /* La altura se ajusta automáticamente para mantener la proporción original */
-    max-width: 800px;
-    /* un máximo para que no se enorme */    
-    object-fit: contain; 
-    /* asegura que la imagen se vea entera(de cara al movil) */
-    border: 2px solid #00FF80; 
-    box-shadow: 0 0 20px rgba(48, 10, 71, 0.8), 
-                0 0 50px rgba(0, 255, 128, 0.4); 
-    border-radius: 10px;
-    
-}
-
-/* DESPLEGABLES(CONTROLA TODOS(Al ser la misma clase)) */
-
-/*Prepara el contenedor del desplegable (el enlace "padre") */
-.dropdown {
-    position: relative; 
-    /* El submenú se posicionará con respecto a este div, ya que será absolute. */
-    
-}
-
-/* 2. Estilo y ocultación del desplegable (el submenú) */
-.dropdown-content {
-    display: none; 
-    /* Oculta el contenido por defecto hasta que pases por ecncima*/
-    position: absolute; 
-    /* Lo coloca justo debajo del div padre (dropdown) */
-    background-color: #183452;  
+h2 {
+    /*titulo del lore*/
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    width: 160px; 
-    /* Ancho para que quepan los textos, sino, el texto sale mal colocado */
-    box-shadow: 0 5px 8px 0 #61ffb5; ;
-    /* Sombra*/
+    color: #08e576; /* Título en neón (verde) */
+    text-shadow: 0 0 10px #e027e6; 
+    margin: 0;
+    /* margen superio reducido */
+    font-size: 2em;
+    letter-spacing: 2px;
+    text-align: center;
 }
 
-/* 3. Estilo de los enlaces del desplegable*/
-.dropdown-content a {
-    color: #ffffff;
-    padding: 12px 16px;
-    text-decoration: none;
-    /*quito la linea de enlace*/
-    display: block; 
-   /* Para que cada enlace ocupe todo el ancho  del contenedor y se pongan de arriba a abajo
-    conviertes enlaces horizontales en verticales y de ancho completo */ 
+.lore {
+    /* Contenedor para la sección de lore, para centrar y dar un ancho */
+    width: 79%;
+    /* que no ocupe todo el ancho, asi mas visual */
+    padding: 20px;
+    /* distancia al borde del contenedor */
+    background-color: rgba(13, 27, 42, 0.7); 
+    border: 2px solid #00FF80; 
+    border-radius: 10px;
+    margin-bottom: 40px;
+    /* distancia con el video */
+    text-align:center;
+    /* para que quede centrado y bonito */
+    position: relative;
+    /* luego usamos esta posicion para colocar el boton */
+}
+/* la clase para oultar los textos */
+.lore-hidden { 
+    display: none;}
+
+.contenedor-video {
+    width: 80%;
+    /* que se vea al 80% el recuadro */
+    height: auto;
+    /* la altura se ajusta automaticamente */
+    display: flex;
+    justify-content: center;
+    margin-bottom:40px;
+    /* distancia con fotos */
 }
 
-/* 4. Efecto de pasar el ratón por los enlaces del submenú */
-.dropdown-content a:hover {
-    background-color: rgba(65, 15, 95, 0.8); 
-    /* Morado al hacer hover */
-}
-
-/*Para mostrar el desplegable que está oculto */
-.dropdown:hover .dropdown-content {
+video {
     display: block;
+    /* que salga de primeras */
+    max-width: 100%;
+    /* que el video no salga del contenedor y se ajuste a su 100% si es más grande */
+    height: auto;
+    /* que el ancho se ajuste al cotenedor padre y
+    la altura se calcula en base a eso para no deformarse */
+    border: 2px solid #00FF80; 
+    box-shadow: 0 0 20px #e027e6;
+    border-radius: 10px;
 }
- /*El espacio en blanco entre :hover y .dropdown-content es un selector descendente.
-     Significa: "selecciona cualquier elemento que esté dentro del elemento anterior".*/
-     /*Es decir:
-     Cuando el ratón esté sobre el elemento .dropdown, 
-     busca y aplica el estilo(block(que se vea)) al elemento .dropdown-content (el submenú) que se encuentra dentro de él."*/
 
-/* Estilo pie de página */
+
+/*  texto del carrusel */
+.titulo-carousel {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    color: #ffffff;
+    text-shadow: 0 0 15px #00FF80; 
+}
+#carousel-container {
+    text-align: center;
+    width: 80%; /* me aseguro que en los moviles se vea al 80 */
+    max-width: 500px; /* Definimos un tamaño maximo para que no sea enorme en escritorio */
+    margin: 0 auto; /* Centramos el contenedor */
+    /* Añadido: Establecer el aspect-ratio para mantener la proporción cuadrada en el contenedor */
+    /* Esto es clave para el truco de padding-bottom si no usas 'aspect-ratio', pero lo simplificaremos con max-width y unidades relativas */
+}
+
+#carousel {
+    width: 100%; 
+    /* Que ocupe el 100% del contenedor */
+    /* La altura debe ser automática para mantener la proporción, pero usamos 'aspect-ratio' */
+    height: auto; 
+    aspect-ratio: 1 / 1;
+    /* esta propiedad le dice al navegador que el alto y el ancho tiene que ser igual */
+    object-fit: cover; 
+    /* Asegura que la imagen se vea bien en el círculo */
+    border-radius: 5%;
+    border: 2px solid #27b3e6c8;
+    box-shadow: 0 0 15px #08e576;
+}
+/* clase del boton de los textos ingles y español */
+#btn-cambio-idioma{
+    position: absolute;
+     /* se pega al relative del lore */
+    top: 20px;
+    right: 4%;
+    margin: 0;
+    padding: 5px 20px;
+    font-size: 1em;
+    z-index: 10;
+}
+/* boton del carousel */
+button {
+    background-color: #300a47; 
+    color: #00FF80; 
+    border: 2px solid #08e576;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    padding: 5px;
+    border-radius: 10px; 
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    /* seguimos con los mismos tiempos */
+}
+
+button:hover {
+    background-color: #00FF80; 
+    color: #0D1B2A; 
+    transform: scale(1.1);
+    /* que pase a un 110% */
+    box-shadow: 0 0 10px #08e576;
+}
 footer {
     width: 100%;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     background-color: #0D1B2A; 
     border-top: 2px solid #00FF80; 
     color: #90A4AE; 
+    font-size: 0.9em;
     margin-top: auto
     /* esto hace que el footer se ajuste al body, 
     que le hemos puesto un 100% y asi el footer va abajo */
 }
-

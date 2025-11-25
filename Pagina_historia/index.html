@@ -1,49 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-         <!--
-         /\                     #######    ####    #####    #####            #####    #######  ####              ######    #####    #####   #####   ##   ##  #######            ######    #####   ######    #####                      /\
-        /**\                     ##   #   ##  ##  ##   ##  ##   ##            ## ##    ##   #   ##                ##  ##  ##   ##  ##   ## ##   ##  ##   ##   ##   #            ##  ##   ##   ##  # ## #   ##   ##                    /**\             
-       /****\                    ## #    ##       ##   ##  #                  ##  ##   ## #     ##                ##  ##  ##   ##  #       ##   ##  ##   ##   ## #              ## ##    ##   ##    ##     ##   ##                   /****\
-      /******\                   ####    ##       ##   ##   #####             ##  ##   ####     ##                #####   ##   ##   #####  ##   ##  ##   ##   ####              #####    ##   ##    ##     ##   ##                  /******\
-     /********\                  ## #    ##       ##   ##       ##            ##  ##   ## #     ##   #            ##  ##  ##   ##       ## ##   ##  ##   ##   ## #              ## ##    ##   ##    ##     ##   ##                 /********\ 
-    /**********\                 ##   #   ##  ##  ##   ##  ##   ##            ## ##    ##   #   ##  ##            ##  ##  ##   ##  ##   ## ##  ###  ##   ##   ##   #            ##  ##   ##   ##    ##     ##   ##                /**********\                  
-        ||||                    #######    ####    #####    #####            #####    #######  #######           ######    #####    #####   #####    #####   #######            #### ##   #####    ####     #####                     ||||                    
-        ||||                                                                                                                                                                                                                          ||||             
--->
-    <link rel="stylesheet" href="styles.css"><meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Un juego que marcará la diferencia, la oscuridad y el tiempo se vuelven uno sólo">
-    <title>Ecos del Bosque Roto</title>
+    <title>Historia del juego</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="contenedor-cabecera">
-    <h1>Ecos del Bosque Roto</h1>
-    <div class="menu-principal"> 
-    <a href="creadores/index.html" target="_blank" class="enlace-menu">CREADORES</a>
-    <!-- target _blank te da acceso a una nueva página -->
-    <a href="historia/index.html" target="_blank" class="enlace-menu">HISTORIA DEL JUEGO</a>   
-    <div class="dropdown">
-            <a href="#" class="enlace-menu">RECURSOS</a>
-                <div class="dropdown-content">
-                    <a href="flujo/index.html">Diagrama de flujo</a>
-                    <a href="base/index.html">Diagrama de entidad-relacion</a>
-                </div>
+
+   <div class="lore">
+    <h2 id="titulo-principal">Historia principal</h2>
+    <div style="text-align: center; margin-bottom: 20px;">
+        <button id="btn-cambio-idioma" onclick="cambiarIdioma()">English</button>
+        <!-- creamos el boton para el cambio de idioma -->
     </div>
-    <div class="dropdown">
-            <a href="#" class="enlace-menu">CÓDIGO</a>
-                <div class="dropdown-content">
-                    <a href="prueba.zip" download>>Descargar código</a>
-                </div>
-        </div>
-    </div> 
+    
+    <p id="texto-español">
+        Piensa rápido, no mires atrás y sigue avanzando. En esta aventura te enfrentarás a ti mismo.
+        ¿Qué harías si te despiertas en un bosque oscuro repleto de fenómenos extraños?
+        Deberás descubrir cómo has llegado hasta esta situación, por ello, toma las decisiones correctas ya que solo una te dará las respuestas que buscas.
+        Tú no eres un cobarde, ¿o tal vez si? ¿Vas a confiar en los demás o eres un lobo solitario? 
+        <br>Recuerda bien cada detalle porque te puede costar la vida.
+        <br><br>
+        Estás siendo vigilado, solo tú puedes escapar de esta pesadilla.
+        ☘️
+    </p>
+
+    <p id="texto-ingles" class="lore-hidden">
+        Think fast, don't look back and keep moving forward. In this adventure you will face yourself.
+        What would you do if you woke up in a dark forest full of strange phenomena?
+        You must discover how you got into this situation, so make the right decisions as only one will give you the answers you seek.
+        You are not a coward, or maybe you are? Will you trust others or are you a lone wolf? Remember every detail because it could cost you your life.
+        <br><br>
+        You are being watched, only you can escape this nightmare.
+        ☘️
+    </p>
 </div>
-<div class="contenedor-principal"> 
-    <img class="portada" src="fotos/portada.png" alt="Arte de portada para Ecos del Bosque Roto"
-    />
-</div>
-<footer>
- © 2025 DAM Xtart. Todos los derechos reservados.
- </footer>
+
+    <div class="contenedor-video">
+        <video controls width="800">
+            <source src="videoentero.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+            <!-- mensaje de reserva por si no se le abre el video -->
+        </video>
+    </div>
+
+    <div class="titulo-carousel">Escenas del juego</div>
+    <div id="carousel-container">
+        <img id="carousel" src="otra.png"/>
+    </div>
+    <div style="margin-top: 20px;">
+        <button onclick="anterior()">←</button>
+        <button onclick="siguiente()">→</button>
+    </div>
+
+    <script>
+        // javascript
+        var numero = 1
+        function siguiente(){
+            numero++
+            if(numero == 10){numero = 1}
+            document.getElementById("carousel").src="otra"+numero+".png"
+        }
+
+        function anterior(){
+            numero--
+            if(numero == 0){numero = 9}
+            document.getElementById("carousel").src="otra"+numero+".png"
+        }
+        
+            // Una vez que JavaScript tiene el elemento "carousel(la propia img)" seleccionado, este punto (.) 
+                // le indica que quieres acceder específicamente a su propiedad src, 
+                // que es donde se define la ruta del archivo de la imagen.
+            // Código: = "otra" + numero + ".png"
+                // Igual (=) para asignar un nuevo valor a la propiedad src.
+                // El valor se construye usando la concatenación de cadenas (unión de texto):
+                // Toma la palabra "otra".
+                // Le añade el valor de la variable numero (que ya fue incrementado o decrementado, por ejemplo, si es 3).
+                // Le añade la extensión del archivo ".png".
+                // Ejemplo: Si la variable numero vale 3, la expresión se convierte en: "otra" + 3 + ".png", lo que resulta en la cadena "png3.jpg".
+    
+    
+        // Para el cambio de idioma:
+        // Variable que registra el idioma actual. Empieza en 'es' (Español)
+        // let es la forma estándar de declarar una variable que se modifica 
+        // y ayuda a evitar problemas de colisión en el ámbito global.
+        let idiomaActual = 'es';
+
+        function cambiarIdioma() {
+            //  La función primero "encuentra" en el documento los cuatro elementos 
+            // clave que necesita modificar( usando los IDs):
+            // Crea las constantes(variables que no se pueden modificar después)
+            const textoEs = document.getElementById('texto-español');// Párrafo en español
+            const textoEn = document.getElementById('texto-ingles');// Párrafo en inglés
+            const titulo = document.getElementById('titulo-principal');// Título
+            const boton = document.getElementById('btn-cambio-idioma');// Botón
+
+            if (idiomaActual === 'es') {
+                // OCULTAR Español y MOSTRAR Inglés
+                textoEs.classList.add('lore-hidden'); // Añade la clase 'lore-hidden', que lo oculta con display none
+                textoEn.classList.remove('lore-hidden');// Quita la clase 'lore-hidden', lo muestra
+                 titulo.textContent = 'Main Lore'; //Cambia el nombre al título
+                boton.textContent = 'Español';//Pone en el botón, español
+                idiomaActual = 'en';//modifica la variable
+            } else {
+                // lo mismo pero al revés
+                textoEn.classList.add('lore-hidden');   
+                textoEs.classList.remove('lore-hidden');   
+                titulo.textContent = 'Historia principal';
+                boton.textContent = 'English';
+                idiomaActual = 'es';
+            }
+        }
+    
+    </script>
+    
+ <footer>
+        © 2025 Alex, Dani y Miguel Xtart. Todos los derechos reservados.
+</footer>   
 </body>
 </html>
