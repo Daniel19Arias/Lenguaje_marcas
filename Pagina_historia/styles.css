@@ -11,6 +11,26 @@ body {
    min-height: 100vh; 
    /* Asegura que el body ocupe el 100% de la altura de la pantalla y asi el footer va abajo*/
 }
+.logo-link{
+    text-decoration: none;
+}
+.logo{
+    display: flex;
+    height: auto;
+    position: absolute;
+    top: 20%;
+    left: 30px;
+}
+.logo img{
+    width: 100px;
+    height: auto;
+    filter: drop-shadow(0 0 5px #00FF80);
+    transition: transform 0.3;
+}
+.logo img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px #e027e6)
+}
 
 h2 {
     /*titulo del lore*/
@@ -145,4 +165,29 @@ footer {
     margin-top: auto
     /* esto hace que el footer se ajuste al body, 
     que le hemos puesto un 100% y asi el footer va abajo */
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo-link {
+    text-decoration: none;
+}
+.logo {
+    display: flex; 
+    align-items: center;
+    position: static;
+}
+.logo img {
+    width: 60px;
+    height: auto;
+    filter: drop-shadow(0 0 5px #00FF80);
+    transition: transform 0.3s;
+}
+.logo img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px #e027e6);
 }

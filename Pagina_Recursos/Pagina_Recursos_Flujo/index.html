@@ -1,15 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diagrama Entidad-Relación</title>
+    <title>Diagrama de Flujo</title>
     
     <style>
        
         body {
-            background: linear-gradient(to bottom, #0D1B2A, #300a47, #12273d);
+            background: linear-gradient(to bottom , #0D1B2A, #300a47, #12273d);
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             display: flex;
             flex-direction: column;
@@ -48,23 +47,48 @@
             max-width: 100%;
             height: auto;
             border-radius: 10px;
-            border: 2px solid #00fff7;
+            border: 2px solid #00FF80;
             box-shadow: 0 0 20px rgba(0, 255, 128, 0.5);
         }
 
         
-        footer {
-            width: 100%;
-            text-align: center;
-            padding: 20px;
-            background-color: #0D1B2A;
-            border-top: 2px solid #00FF80;
-            color: #90A4AE;
-            font-size: 0.9em;
-            margin-top: auto; 
-            /* esto hace que el footer se ajuste al body, 
-            que le hemos puesto un 100% y asi el footer va abajo */
-        }
+       footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #0D1B2A; 
+    border-top: 2px solid #00FF80; 
+    color: #90A4AE; 
+    font-size: 0.9em;
+    margin-top: auto
+    /* esto hace que el footer se ajuste al body, 
+    que le hemos puesto un 100% y asi el footer va abajo */
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo-link {
+    text-decoration: none;
+}
+.logo {
+    display: flex; 
+    align-items: center;
+    position: static;
+}
+.logo img {
+    width: 60px;
+    height: auto;
+    filter: drop-shadow(0 0 5px #00FF80);
+    transition: transform 0.3s;
+}
+.logo img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px #e027e6);
+}
 
         
     </style>
@@ -72,14 +96,21 @@
 <body>
 
     <div class="contenedor">
-        <h1 class="titulo">Diagrama Entidad-Relación</h1>
+        <h1 class="titulo">Diagrama de Flujo</h1>
         <div>
             <img class="imagen" src="flujo.jpg">
         </div>
     </div>
 
     <footer>
-        © 2025 Alex, Dani y Miguel Xtart. Todos los derechos reservados.
-    </footer>
+    <div class="footer-content">
+       <p> © 2025 Alex, Dani y Miguel Xtart. Todos los derechos reservados.</p>
+         
+        <a href="../index.html" class="logo-link">
+     <div class="logo">
+        <img src="logo_trebol.png" alt="logo del trébol" target="_self">
+    </div>
+    </a>
+</footer> 
 </body>
 </html>

@@ -73,7 +73,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 255, 128, 0.8);
 }
 .tarjeta-creador:hover .imagen-creador {
-     border-color: #000000;}
+     border-color: #000000};
     /* que el circulo de la imagen cambie a negro al hacer hover en la tarjeta */
 
 .nombre-creador {
@@ -92,6 +92,7 @@ body {
     
 }
 
+
 footer {
     width: 100%;
     text-align: center;
@@ -103,4 +104,29 @@ footer {
     margin-top: auto
     /* esto hace que el footer se ajuste al body, 
     que le hemos puesto un 100% y asi el footer va abajo */
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo-link {
+    text-decoration: none;
+}
+.logo {
+    display: flex; 
+    align-items: center;
+    position: static;
+}
+.logo img {
+    width: 60px;
+    height: auto;
+    filter: drop-shadow(0 0 5px #00FF80);
+    transition: transform 0.3s;
+}
+.logo img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px #e027e6);
 }
