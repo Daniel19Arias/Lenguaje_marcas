@@ -72,6 +72,9 @@ body {
     border: 4px solid #00FF80;  
     box-shadow: 0 0 10px rgba(0, 255, 128, 0.8);
 }
+.tarjeta-creador:hover .imagen-creador {
+     border-color: #000000;}
+    /* que el circulo de la imagen cambie a negro al hacer hover en la tarjeta */
 
 .nombre-creador {
     color: #61ffb5;
@@ -88,7 +91,6 @@ body {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
     
 }
-
 
 footer {
     width: 100%;
