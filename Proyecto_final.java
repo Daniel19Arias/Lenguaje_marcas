@@ -691,16 +691,61 @@ public class Proyecto_final {
     }
     public static void iniciar_musica_juego() {
         try {
+            // --- PARTE 1: MÚSICA DE FONDO ---
+            System.out.println("Intentando cargar música de fondo...");
             String ruta = "Sonidos\\Sonidos-en-un-Cementerio-de-noche-_1HH3pTx9tek_.wav";
 
-            AudioInputStream audio = AudioSystem.getAudioInputStream(new File(ruta));
-            musicaMenu = AudioSystem.getClip();
-            musicaMenu.open(audio);
-            musicaMenu.loop(Clip.LOOP_CONTINUOUSLY); // 🎵Repetir en bucle
-            musicaMenu.start();
+            File archivoFondo = new File(ruta);
+            if(archivoFondo.exists()){
+                AudioInputStream audio = AudioSystem.getAudioInputStream(archivoFondo);
+                musicaMenu = AudioSystem.getClip();
+                musicaMenu.open(audio);
+                musicaMenu.loop(Clip.LOOP_CONTINUOUSLY);
+                musicaMenu.start();
+            } else {
+                System.out.println("❌ ERROR: No encuentro el archivo de fondo: " + ruta);
+            }
+
+            // --- PARTE 2: EL SONIDO DEL CUERVO CADA 5 SEGUNDOS ---
+
+            ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+
+            scheduler.scheduleAtFixedRate(() -> {
+                try {
+                    String rutaSonidoExtra = "Sonidos\\raven-call-72946 (mp3cut.net).wav";
+                    File archivoExtra = new File(rutaSonidoExtra);
+
+                    if (archivoExtra.exists()) {
+                        AudioInputStream audioExtra = AudioSystem.getAudioInputStream(archivoExtra);
+                        Clip clipExtra = AudioSystem.getClip();
+                        clipExtra.open(audioExtra);
+
+                        // 1. Iniciamos el sonido
+                        clipExtra.start();
+
+                        // 2. ¡IMPORTANTE! Esperamos a que termine de sonar antes de matar este hilo
+                        // Si no hacemos esto, Java puede cortar el sonido a medias.
+                        long duracionMicrosegundos = clipExtra.getMicrosecondLength();
+                        long duracionMilisegundos = duracionMicrosegundos / 1000;
+
+                        Thread.sleep(duracionMilisegundos + 100); // Esperamos lo que dura el audio
+
+                        // 3. Cerramos el clip para liberar memoria
+                        clipExtra.close();
+                        audioExtra.close();
+
+                    } else {
+                        System.out.println("❌ ERROR: No encuentro el sonido del cuervo: " + rutaSonidoExtra);
+                    }
+                } catch (Exception e) {
+                    System.out.println("Error en el sonido extra: " + e.getMessage());
+                    e.printStackTrace();
+                }
+            }, 0, 8, TimeUnit.SECONDS); // 0 espera inicial, repite cada 8 seg
 
         } catch (Exception e) {
-            System.out.println("No se pudo cargar la música: " + e.getMessage());
+            System.out.println("No se pudo cargar la música de fondo: " + e.getMessage());
+            e.printStackTrace();
         }
     }
     public static void sonido_pasos_arbol() {
