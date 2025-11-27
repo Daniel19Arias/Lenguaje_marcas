@@ -12,20 +12,20 @@ public class Proyecto_final {
     static String nombre;
     public static void main(String[] args) {
         Proyecto_final proyecto = new Proyecto_final();
-        System.out.print("Escriba su nombre para comenzar la historia: ");
+        System.out.print("¿Cuál es tu nombre?: ");
         nombre = sc.nextLine();
         proyecto.juego();
     }
     public void juego(){
         while (true) {
-            System.out.println("Bienvenido al juego, "+nombre+", ya formas parte de nuestro experimento");
+            System.out.println("Bienvenido, "+nombre+", ya formas parte de nuestro experimento");
             iniciar_musica_juego();
             System.out.println("=================================🌲☘️ Ecos del Bosque Roto ☘️🌲=================================");
             inventario();
-            System.out.println("Despiertas en un bosque oscuro rodeado de árboles muy altos, no llevas nada más que una camiseta negra, una chaqueta, unos pantalones medio rasgados, unas zapatillas de correr desgastadas y un gorro, debido a la situación, tus sentidos se han agudizado, escuchas ruidos variados desde múltiples direcciones. Tienes tan solo de referencia un árbol marcado con un trébol, debes moverte, elige un camino:");
+            System.out.println("Despiertas en un bosque oscuro rodeado de árboles muy altos, no llevas nada más que una camiseta negra, una chaqueta, unos pantalones medio rasgados y unas zapatillas de correr desgastadas, debido a la situación, tus sentidos se han agudizado, escuchas ruidos variados desde múltiples direcciones. Tienes tan solo de referencia un árbol marcado con un trébol, debes moverte, elige un camino:");
             int opcion;
             System.out.println("================================================================================================");
-            System.out.println("Hacia que zona decides avanzar");
+            System.out.println("¿Qué camino eliges??");
             System.out.println("1. Moverse por la parte izquierda del arbol marcado ‍🚶🏼‍♂️️");
             System.out.println("2. Moverse por la parte derecha del arbol marcado 🚶🏼‍♂️‍➡️");
             System.out.println("================================================================================================");
@@ -33,8 +33,8 @@ public class Proyecto_final {
             opcion = sc.nextInt();
             while (opcion != 1 && opcion != 2) {
                 System.out.println("================================================================================================");
-                System.out.println("🔁 Estas obligado a escoger. ¡No tienes escapatoria! 🔁");
-                System.out.println("Despiertas en un bosque oscuro rodeado de árboles muy altos, no llevas nada más que una camiseta negra, una chaqueta, unos pantalones medio rasgados, unas zapatillas de correr desgastadas y un gorro, debido a la situación, tus sentidos se han agudizado, escuchas ruidos variados desde múltiples direcciones. Tienes tan solo de referencia un árbol marcado con un trébol, debes moverte, elige un camino:");
+                System.out.println("🔁 Estás obligado a escoger. ¡No tienes escapatoria! 🔁");
+                System.out.println("Despiertas en un bosque oscuro rodeado de árboles muy altos, no llevas nada más que una camiseta negra, una chaqueta, unos pantalones medio rasgados y unas zapatillas de correr desgastadas, debido a la situación, tus sentidos se han agudizado, escuchas ruidos variados desde múltiples direcciones. Tienes tan solo de referencia un árbol marcado con un trébol, debes moverte, elige un camino:");
                 System.out.println("Hacia que zona decides avanzar");
                 System.out.println("1. Moverse por la parte izquierda del arbol marcado ‍🚶🏼‍♂️️");
                 System.out.println("2. Moverse por la parte derecha del arbol marcado 🚶🏼‍♂️‍➡️");
@@ -42,7 +42,7 @@ public class Proyecto_final {
             }
             if (opcion == 1) {
                 System.out.println("================================================================================================");
-                System.out.println("Su eleccion fue avanzar por la parte izquierda del arbol marcado");
+                System.out.println("Elegiste avanzar por la parte izquierda del arbol marcado");
                 System.out.println("Sigues por un camino donde la tierra comienza a humedecerse y sientes como se te empiezan a hundir los pies en charcas de lodo. ");
                 sonido_pasos_arbol();
                 System.out.println("================================================================================================");
@@ -54,17 +54,17 @@ public class Proyecto_final {
                 opcion = sc.nextInt();
                 while (opcion != 1 && opcion != 2) {
                     System.out.println("================================================================================================");
-                    System.out.println("🔁 Estas obligado a escoger. ¡No tienes escapatoria! 🔁");
+                    System.out.println("🔁 Estás obligado a escoger. ¡No tienes escapatoria! 🔁");
                     System.out.println("Su eleccion fue avanzar por la parte izquierda del arbol marcado");
                     System.out.println("Sigues por un camino donde la tierra comienza a humedecerse y sientes como se te empiezan a hundir los pies en charcas de lodo. ");
-                    System.out.println("Hacia que zona decides avanzar");
+                    System.out.println("¿Qué decisión tomarás?");
                     System.out.println("1. Subirte al árbol más cercano 🏃🏼‍♂️‍➡️⬆️🌲");
                     System.out.println("2. Moverte más rápido para pasar el camino 🏃🏼‍♂️️💨");
                     opcion = sc.nextInt();
                 }
                 if (opcion == 1) {
                     System.out.println("================================================================================================");
-                    System.out.println("Su eleccion fue subes al arbol mas cercano");
+                    System.out.println("Elegiste subir al arbol mas cercano");
                     System.out.println("Al hacerlo acabas cansado así que decides reposar un poco. Al cabo de unos minutos escuchas unas campanas sonar, y ves como un grupo de personas encapuchadas pasan por debajo de ti. A uno de ellos se le caen unas llaves");
                     subir_arbol();
                     System.out.println("================================================================================================");
@@ -76,8 +76,8 @@ public class Proyecto_final {
                     opcion = sc.nextInt();
                     while (opcion != 1 && opcion != 2){
                         System.out.println("================================================================================================");
-                        System.out.println("🔁 Estas obligado a escoger. ¡No tienes escapatoria! 🔁");
-                        System.out.println("Su eleccion fue subes al arbol mas cercano");
+                        System.out.println("🔁 Estás obligado a escoger. ¡No tienes escapatoria! 🔁");
+                        System.out.println("Elegiste subir al arbol más cercano");
                         System.out.println("Al hacerlo acabas cansado así que decides reposar un poco. Al cabo de unos minutos escuchas unas campanas sonar, y ves como un grupo de personas encapuchadas pasan por debajo de ti. A uno de ellos se le caen unas llaves");
                         System.out.println("¿Decides bajar a cogerlas?");
                         System.out.println("1. Si ✅");
@@ -88,7 +88,7 @@ public class Proyecto_final {
                         llaves = true;
                         System.out.println("================================================================================================");
                         System.out.println("Elegiste bajar a coger las llaves");
-                        System.out.println("Al intentar bajar, se te engancha la chaqueta a una de las ramas y caes a plomo contra el suelo haciendo mucho ruido. El grupo se da la vuelta y corren a por ti.");
+                        System.out.println("Al intentar bajar, se te engancha la chaqueta en una de las ramas y caes a plomo contra el suelo haciendo mucho ruido. El grupo se da la vuelta y corren a por ti.");
                         sonido_llaves();
                         mensaje_perdedor();
                         System.out.println("================================================================================================");
@@ -100,7 +100,7 @@ public class Proyecto_final {
                         System.out.println("Decides esperar a que se vayan. Bajas cautelosamente del árbol y guardas las llaves en el bolsillo de tu chaqueta. Pesan bastante y tienen formas extrañas. Están manchadas de algo aceitoso ");
                         sonido_llaves();
                         System.out.println("================================================================================================");
-                        System.out.println("¿Qué camino elegirias?");
+                        System.out.println("¿Qué camino elegirás?");
                         System.out.println("1. Ir por donde el grupo 👨🏿‍👩🏻‍👧🏾‍👦🏽");
                         System.out.println("2. Ir en dirección contraria al grupo ❌👨🏿‍👩🏻‍👧🏾‍👦🏽");
                         System.out.println("================================================================================================");
@@ -108,7 +108,7 @@ public class Proyecto_final {
                         opcion = sc.nextInt();
                         while (opcion != 1 && opcion != 2) {
                             System.out.println("================================================================================================");
-                            System.out.println("🔁 Estas obligado a escoger. ¡No tienes escapatoria! 🔁");
+                            System.out.println("🔁 Estás obligado a escoger. ¡No tienes escapatoria! 🔁");
                             System.out.println("Decidiste no bajar a por las llaves");
                             System.out.println("Decides esperar a que se vayan. Bajas cautelosamente del árbol y guardas las llaves en el bolsillo de tu chaqueta. Pesan bastante y tienen formas extrañas. Están manchadas de algo aceitoso ");
                             System.out.println("¿Qué camino elegirias?");
@@ -117,17 +117,17 @@ public class Proyecto_final {
                             opcion = sc.nextInt();
                         }
                         if (opcion == 1) {
-                            System.out.println("Moviéndote de forma cautelosa siguiendo las huellas que van dejando el grupo te encuentras con una enorme aldea de personas, coges unos ropajes que encuentras y caminas por la aldea hasta un callejón en la que ves a varias personas encerradas en jaulas. Asustado metes las manos en los bolsillos y tocas las llaves ");
+                            System.out.println("Moviéndote de forma cautelosa siguiendo las huellas que van dejando, te encuentras con una enorme aldea de personas, coges unos ropajes que encuentras y caminas hasta un callejón en la que ves a varias personas encerradas en jaulas. Asustado metes las manos en los bolsillos y tocas las llaves ");
                             sonido_pasos_arbol();
                             System.out.println("1. Pruebas a abrir las jaulas ⛓️‍💥");
                             System.out.println("2. Decides continuar tu camino ➡️🚶🏼‍♂️‍➡️");
                             opcion = sc.nextInt();
                             while (opcion != 1 && opcion != 2) {
                                 System.out.println("================================================================================================");
-                                System.out.println("🔁 Estas obligado a escoger. ¡No tienes escapatoria! 🔁");
-                                System.out.println("Moviéndote de forma cautelosa siguiendo las huellas que van dejando el grupo te encuentras con una enorme aldea de personas, coges unos ropajes que encuentras y caminas por la aldea hasta un callejón en la que ves a varias personas encerradas en jaulas. Asustado metes las manos en los bolsillos y tocas las llaves ");
+                                System.out.println("🔁 Estás obligado a escoger. ¡No tienes escapatoria! 🔁");
+                                System.out.println("Moviéndote de forma cautelosa siguiendo las huellas que van dejando, te encuentras con una enorme aldea de personas, coges unos ropajes que encuentras y caminas hasta un callejón en la que ves a varias personas encerradas en jaulas. Asustado metes las manos en los bolsillos y tocas las llaves ");
                                 System.out.println("1. Pruebas a abrir las jaulas ⛓️‍💥");
-                                System.out.println("2. Decides continuar tu camino ");
+                                System.out.println("2. Decides continuar tu camino ➡️🚶🏼‍♂️‍➡️");
                                 opcion = sc.nextInt();
                             }
                             if (opcion == 1) {
@@ -147,7 +147,7 @@ public class Proyecto_final {
                             }
                         }else if (opcion == 2) {
                             System.out.println("================================================================================================");
-                            System.out.println("Al ir en dirección contraria al grupo, te llevan a un camino donde ves a varios grupos de personas que parecen ser cazadores de conejos. Uno de ellos se percata de tu presencia y comienza a gritarte.No parece querer hacerte daño, pero va armado ");
+                            System.out.println("Al ir en dirección contraria al grupo, te llevan a un camino donde ves a un grupo de personas que parecen ser cazadores de conejos. Uno de ellos se percata de tu presencia y comienza a gritarte. No parece querer hacerte daño, pero va armado ");
                             sonido_pasos_arbol();
                             System.out.println("================================================================================================");
                             System.out.println("1. Dialogas 💬");
@@ -157,8 +157,8 @@ public class Proyecto_final {
                             opcion = sc.nextInt();
                             while (opcion != 1 && opcion != 2) {
                                 System.out.println("================================================================================================");
-                                System.out.println("🔁 Estas obligado a escoger. ¡No tienes escapatoria! 🔁");
-                                System.out.println("Al ir en dirección contraria al grupo, te llevan a un camino donde ves a varios grupos de personas que parecen ser cazadores de conejos. Uno de ellos se percata de tu presencia y comienza a gritarte.No parece querer hacerte daño, pero va armado ");
+                                System.out.println("🔁 Estás obligado a escoger. ¡No tienes escapatoria! 🔁");
+                                System.out.println("Al ir en dirección contraria al grupo, te llevan a un camino donde ves a un grupo de personas que parecen ser cazadores de conejos. Uno de ellos se percata de tu presencia y comienza a gritarte.No parece querer hacerte daño, pero va armado ");
                                 System.out.println("1. Dialogas 💬");
                                 System.out.println("2. Corres 🏃🏼‍♂️‍➡️");
                                 opcion = sc.nextInt();
@@ -183,7 +183,7 @@ public class Proyecto_final {
                 }
                 else if (opcion == 2) {
                     System.out.println("================================================================================================");
-                    System.out.println("Escoges moverte rapido para pasar el camino");
+                    System.out.println("Escoges moverte rápido para pasar el camino");
                     System.out.println("Pasas corriendo por los enormes charcos de lodo y tropiezas con una piedra marcada con un trébol. Al levantarte sientes una presencia detrás de ti, estás atemorizado, pero curioso ");
                     huir_corriendo();
                     System.out.println("================================================================================================");
@@ -195,8 +195,8 @@ public class Proyecto_final {
                     opcion = sc.nextInt();
                     while (opcion != 1 &&  opcion != 2) {
                         System.out.println("================================================================================================");
-                        System.out.println("🔁 Estas obligado a escoger. ¡No tienes escapatoria! 🔁");
-                        System.out.println("Escoges moverte rapido para pasar el camino");
+                        System.out.println("🔁 Estás obligado a escoger. ¡No tienes escapatoria! 🔁");
+                        System.out.println("Escoges moverte rápido para pasar el camino");
                         System.out.println("Pasas corriendo por los enormes charcos de lodo y tropiezas con una piedra marcada con un trébol. Al levantarte sientes una presencia detrás de ti, estás atemorizado, pero curioso ");
                         System.out.println("¿Decides darte la vuelta?");
                         System.out.println("1. Si ✅");
@@ -205,10 +205,10 @@ public class Proyecto_final {
                     }
                     if (opcion == 1) {
                         System.out.println("================================================================================================");
-                        System.out.println("Le echas valor y al darte la vuelta ves que era un pequeño conejito cogiendo bellotas. Logras tranquilizarte y decides seguir el camino seco donde a ves un pasadizo que lleva a una pequeña cabaña  ");
+                        System.out.println("Le echas valor y al darte la vuelta ves que era un pequeño conejito cogiendo bellotas. Logras tranquilizarte y decides seguir el camino seco donde ves un pasadizo que lleva a una pequeña cabaña  ");
                         conejo_comiendo();
                         System.out.println("================================================================================================");
-                        System.out.println("¿Qué decides a hacer?");
+                        System.out.println("¿Qué harás ahora?");
                         System.out.println("1. Mirar los alrededores 🔎");
                         System.out.println("2. Entrar a la cabaña 🚶🏼‍♂️‍➡️🛖");
                         System.out.println("================================================================================================");
@@ -216,9 +216,9 @@ public class Proyecto_final {
                         opcion = sc.nextInt();
                         while (opcion != 1 &&  opcion != 2) {
                             System.out.println("================================================================================================");
-                            System.out.println("🔁 Estas obligado a escoger. ¡No tienes escapatoria! 🔁");
+                            System.out.println("🔁 Estás obligado a escoger. ¡No tienes escapatoria! 🔁");
                             System.out.println("Le echas valor y al darte la vuelta ves que era un pequeño conejito cogiendo bellotas. Logras tranquilizarte y decides seguir el camino seco donde a ves un pasadizo que lleva a una pequeña cabaña  ");
-                            System.out.println("¿Qué decides a hacer?");
+                            System.out.println("¿Qué harás ahora?");
                             System.out.println("1. Mirar los alrededores 🔎");
                             System.out.println("2. Entrar a la cabaña 🚶🏼‍♂️‍➡️🛖");
                             opcion = sc.nextInt();
@@ -236,7 +236,7 @@ public class Proyecto_final {
                             opcion = sc.nextInt();
                             while (opcion != 1 &&  opcion != 2) {
                                 System.out.println("================================================================================================");
-                                System.out.println("🔁 Estas obligado a escoger. ¡No tienes escapatoria! 🔁");
+                                System.out.println("🔁 Estás obligado a escoger. ¡No tienes escapatoria! 🔁");
                                 System.out.println("Encuentras la entrada al sótano de la cabaña, ves unos tablones y decides tapiar la entrada. Te sientes más seguro, no hace tanto frío, pero sigues indefenso. Exploras la cabaña y encuentras comida, ropa y una pequeña estufa con la que entrar en calor. Cuando consigues sentirte cómodo, escuchas un ruido");
                                 System.out.println("¿Qué vas a hacer?");
                                 System.out.println("1. Comprobar su origen 🧏🏼");
@@ -261,7 +261,7 @@ public class Proyecto_final {
                         }
                         else if (opcion == 2) {
                             System.out.println("================================================================================================");
-                            System.out.println("Entras en la cabaña por la puerta principal. No hay nadie, se respira un ambiente frío y desolador, cierras todas las puertas y ventanas y encuentras una manta que te cubre todo el cuerpo, comida y una hoguera que logras encender con unas cerillas que había.  Encuentras una escopeta y en ese preciso momento escuchas un ruido");
+                            System.out.println("Entras en la cabaña por la puerta principal. No hay nadie, se respira un ambiente frío y desolador, cierras todas las puertas y ventanas y encuentras una manta que te cubre todo el cuerpo, comida y una hoguera que logras encender con unas cerillas que sacaste de un cajón.  Encuentras una escopeta y en ese preciso momento escuchas un ruido");
                             chirrido_puerta();
                             System.out.println("================================================================================================");
                             System.out.println("¿Qué vas a hacer?");
@@ -273,7 +273,7 @@ public class Proyecto_final {
                             while (opcion != 1 &&  opcion != 2) {
                                 System.out.println("================================================================================================");
                                 System.out.println("🔁 Estas obligado a escoger. ¡No tienes escapatoria! 🔁");
-                                System.out.println("Entras en la cabaña por la puerta principal. No hay nadie, se respira un ambiente frío y desolador, cierras todas las puertas y ventanas y encuentras una manta que te cubre todo el cuerpo, comida y una hoguera que logras encender con unas cerillas que había.  Encuentras una escopeta y en ese preciso momento escuchas un ruido");
+                                System.out.println("Entras en la cabaña por la puerta principal. No hay nadie, se respira un ambiente frío y desolador, cierras todas las puertas y ventanas y encuentras una manta que te cubre todo el cuerpo, comida y una hoguera que logras encender con unas cerillas que sacaste de un cajón.  Encuentras una escopeta y en ese preciso momento escuchas un ruido");
                                 System.out.println("¿Qué vas a hacer?");
                                 System.out.println("1. Comprobar su origen 🧏🏼🔎");
                                 System.out.println("2. Esconderse 🐢");
@@ -305,11 +305,11 @@ public class Proyecto_final {
             }
             else if (opcion == 2) {
                 System.out.println("================================================================================================");
-                System.out.println("Su eleccion fue avanzar por la parte derecha del arbol marcado");
-                System.out.println("Sigues por un camino tranquilo en el que de pronto ves una extraña figura a la lejanía, entrando a lo que parece una cabaña ");
+                System.out.println("Elegiste avanzar por la parte derecha del árbol marcado");
+                System.out.println("Sigues por un camino tranquilo en el que de pronto ves una extraña figura en la lejanía, entrando a lo que parece una cabaña ");
                 sonido_pasos_arbol();
                 System.out.println("================================================================================================");
-                System.out.println("¿Qué decides hacer?");
+                System.out.println("¿Qué vas a hacer?");
                 System.out.println("1. Dirigirse hacia la figura 🚶🏼‍♂️‍➡️🗿");
                 System.out.println("2. Explorar el entorno 🔎🌲🌳");
                 System.out.println("================================================================================================");
@@ -317,10 +317,10 @@ public class Proyecto_final {
                 opcion = sc.nextInt();
                 while (opcion != 1 && opcion != 2) {
                     System.out.println("================================================================================================");
-                    System.out.println("🔁 Estas obligado a escoger. ¡No tienes escapatoria! 🔁");
-                    System.out.println("Su eleccion fue avanzar por la parte derecha del arbol marcado");
-                    System.out.println("Sigues por un camino tranquilo en el que de pronto ves una extraña figura a la lejanía, entrando a lo que parece una cabaña ");
-                    System.out.println("¿Qué decides hacer? (responde con 1 o 2)");
+                    System.out.println("🔁 Estás obligado a escoger. ¡No tienes escapatoria! 🔁");
+                    System.out.println("Elegiste avanzar por la parte derecha del árbol marcado");
+                    System.out.println("Sigues por un camino tranquilo en el que de pronto ves una extraña figura en la lejanía, entrando a lo que parece una cabaña ");
+                    System.out.println("¿Qué vas a hacer? (responde con 1 o 2)");
                     System.out.println("1. Dirigirse hacia la figura 🚶🏼‍♂️‍➡️🗿");
                     System.out.println("2. Explorar el entorno 🔎🌲🌳");
                     opcion = sc.nextInt();
@@ -338,7 +338,7 @@ public class Proyecto_final {
                     opcion = sc.nextInt();
                     while (opcion != 1 && opcion != 2) {
                         System.out.println("================================================================================================");
-                        System.out.println("🔁 Estas obligado a escoger. ¡No tienes escapatoria! 🔁");
+                        System.out.println("🔁 Estás obligado a escoger. ¡No tienes escapatoria! 🔁");
                         System.out.println("Conforme te acercas a la cabaña empiezas a ver plantas muertas, bandejas de comida tiradas por los alrededores y ves iluminación proveniente de una chimenea dentro de la cabaña. Hay una ventana medio abierta por la que cabes");
                         System.out.println("¿Decides entrar");
                         System.out.println("1. Si ✅");
@@ -347,7 +347,7 @@ public class Proyecto_final {
                     }
                     if (opcion == 1) {
                         System.out.println("================================================================================================");
-                        System.out.println("Entras sin hacer ningún ruido, te llega un olor a carne quemada y comienzas a escuchar murmullos de una persona. Al asomarte a la chimenea, ves a una persona apuntándote con una escopeta");
+                        System.out.println("Entras sin hacer ningún ruido, te llega un olor a comida recién calentada y comienzas a escuchar murmullos de una persona. Al asomarte a la chimenea, ves a una persona apuntándote con una escopeta");
                         ventana_abriendo();
                         System.out.println("================================================================================================");
                         System.out.println("Aterrorizado solo tienes dos posibles opciones, ¿Cuál decides?");
@@ -358,8 +358,8 @@ public class Proyecto_final {
                         opcion=sc.nextInt();
                         while (opcion != 1 && opcion != 2) {
                             System.out.println("================================================================================================");
-                            System.out.println("🔁 Estas obligado a escoger. ¡No tienes escapatoria! 🔁");
-                            System.out.println("Entras sin hacer ningún ruido, te llega un olor a carne quemada y comienzas a escuchar murmullos de una persona. Al asomarte a la chimenea, ves a una persona apuntándote con una escopeta");
+                            System.out.println("🔁 Estás obligado a escoger. ¡No tienes escapatoria! 🔁");
+                            System.out.println("Entras sin hacer ningún ruido, te llega un olor a comida recién calentada y comienzas a escuchar murmullos de una persona. Al asomarte a la chimenea, ves a una persona apuntándote con una escopeta");
                             System.out.println("Aterrorizado solo tienes dos posibles opciones, ¿Cuál decides?");
                             System.out.println("1. Dialogar 💬");
                             System.out.println("2. Correr 🏃🏼‍♂️‍➡️");
@@ -395,7 +395,7 @@ public class Proyecto_final {
                         opcion = sc.nextInt();
                         while (opcion != 1  && opcion != 2) {
                             System.out.println("================================================================================================");
-                            System.out.println("🔁 Estas obligado a escoger. ¡No tienes escapatoria! 🔁");
+                            System.out.println("🔁 Estás obligado a escoger. ¡No tienes escapatoria! 🔁");
                             System.out.println("Decides comprobar los alrededores antes de entrar y encuentras un cobertizo con varias herramientas rotas. Logras rescatar una linterna de mucha potencia.");
                             System.out.println("¿Entras en la cabaña?");
                             System.out.println("1. Si ✅");
@@ -415,7 +415,7 @@ public class Proyecto_final {
                             opcion = sc.nextInt();
                             while (opcion != 1  && opcion != 2) {
                                 System.out.println("================================================================================================");
-                                System.out.println("🔁 Estas obligado a escoger. ¡No tienes escapatoria! 🔁");
+                                System.out.println("🔁 Estás obligado a escoger. ¡No tienes escapatoria! 🔁");
                                 System.out.println("Al entrar en la cabaña ves a un hombre con una manta que le cubre por completo, parece asustado. Tratas de hablar con él y cuando se da la vuelta ves que es muy parecido a ti. Juntos tratáis de explicar vuestra situación. Tras un largo rato recuperáis energía y discutís sobre lo que debéis hacer.");
                                 System.out.println("¿Qué haréis?");
                                 System.out.println("1. Pasar la noche en la cabaña 🌙🛖");
@@ -457,7 +457,7 @@ public class Proyecto_final {
                     opcion = sc.nextInt();
                     while (opcion != 1 && opcion != 2) {
                         System.out.println("================================================================================================");
-                        System.out.println("🔁 Estas obligado a escoger. ¡No tienes escapatoria! 🔁");
+                        System.out.println("🔁 Estás obligado a escoger. ¡No tienes escapatoria! 🔁");
                         System.out.println("Antes de dirigirte a la cabaña, exploras los alrededores. Hay un montón de pieles de conejo apiladas en un tocón y hay varios árboles marcados con un trébol. Al revisar uno de ellos encuentras un hacha oxidada ");
                         System.out.println("¿Decides coger el hacha?");
                         System.out.println("1. Si ✅");
@@ -478,7 +478,7 @@ public class Proyecto_final {
                         opcion = sc.nextInt();
                         while (opcion != 1 && opcion != 2) {
                             System.out.println("================================================================================================");
-                            System.out.println("🔁 Estas obligado a escoger. ¡No tienes escapatoria! 🔁");
+                            System.out.println("🔁 Estás obligado a escoger. ¡No tienes escapatoria! 🔁");
                             System.out.println("Pesa demasiado pero te sientes menos indefenso, al acercarte a la cabaña ves una entrada exterior al sótano pero está tapiada por maderas con clavos");
                             System.out.println("¿decides romperlas con el hacha? ");
                             System.out.println("1. Si ✅");
@@ -504,7 +504,7 @@ public class Proyecto_final {
                             opcion = sc.nextInt();
                             while (opcion != 1 && opcion != 2) {
                                 System.out.println("================================================================================================");
-                                System.out.println("🔁 Estas obligado a escoger. ¡No tienes escapatoria! 🔁");
+                                System.out.println("🔁 Estás obligado a escoger. ¡No tienes escapatoria! 🔁");
                                 System.out.println("Decides no hacerlo, piensas que es mejor idea tratar de buscar ayuda de manera pacífica.  Tocas la puerta principal de la cabaña y esperas a que alguien te abra.  Una persona de tu misma altura, tapado por una manta y equipado con una escopeta te pide que te identifiques. Le comentas tu situación y rápidamente te abre la puerta para que pases.  Juntos compartís vuestra experiencia y decidís tomar una decisión");
                                 System.out.println("1. Pasar la noche en la cabaña 🌙➡️☀️");
                                 System.out.println("2. Salir de noche 🌙🚶🏼‍♂️‍➡️");
@@ -513,7 +513,7 @@ public class Proyecto_final {
                             if (opcion == 1) {
                                 System.out.println("================================================================================================");
                                 System.out.println("Pasáis la noche en vela, no podéis dormir, no entendéis cómo es posible que todo esto haya ocurrido. Empezáis a dudar el uno de otro. Os enfrentáis por ver quien es el verdadero tú");
-                                System.out.println("¿Quién eres tu realmente? ¿De verdad vas a creerle? ¿A lo mejor tu también mientes?");
+                                System.out.println("¿Quién eres tu realmente? ¿De verdad vas a creerle? ¿A lo mejor tú también mientes?");
                                 mensaje_perdedor2();
                                 System.out.println("================================================================================================");
                             }
@@ -532,7 +532,7 @@ public class Proyecto_final {
                         System.out.println("================================================================================================");
                         System.out.println("Le echas valor y decides ponerte en guardia ¿Qué harás?");
                         System.out.println("1. Golpear antes de aproximarse");
-                        System.out.println("2. Esperar  a que se aproxime");
+                        System.out.println("2. Esperar a que se aproxime");
                         System.out.println("================================================================================================");
                         System.out.print("Tu respuesta es: ");
                         opcion = sc.nextInt();
@@ -552,7 +552,7 @@ public class Proyecto_final {
                         }
                         while (opcion !=1 && opcion !=2) {
                             System.out.println("================================================================================================");
-                            System.out.println("🔁 Estas obligado a escoger. ¡No tienes escapatoria! 🔁");
+                            System.out.println("🔁 Estás obligado a escoger. ¡No tienes escapatoria! 🔁");
                             System.out.println("Al estar oxidada es muy probable que se rompa al usarla así que decides ir camino a la cabaña y sin querer tropiezas con una maza que no habías visto así que decides cogerla e ir a la cabaña. Escuchas ruido dentro y parece aproximarse a dónde estás tu ");
                             System.out.println("Le echas valor y decides ponerte en guardia ¿Qué harás?");
                             System.out.println("1. Golpear antes de aproximarse");
@@ -673,16 +673,16 @@ public class Proyecto_final {
         System.out.println("Hola, "+nombre+" Este es el inventario de tu partida actual:");
         System.out.println("================================================================================================");
         if (linterna == true){
-            System.out.println("- Linterna 🔦, recuerda lo que paso cuando decidiste cogerlas ☘️");
+            System.out.println("- Linterna 🔦, recuerda lo que pasó cuando decidiste cogerlas ☘️");
         }
         if (hacha == true){
-            System.out.println("- Hacha 🪓, recuerda lo que paso cuando decidiste cogerlas ☘️");
+            System.out.println("- Hacha 🪓, recuerda lo que pasó cuando decidiste cogerlas ☘️");
         }
         if (maza == true){
-            System.out.println("- Maza 🔨, recuerda lo que paso cuando decidiste cogerlas ☘️");
+            System.out.println("- Maza 🔨, recuerda lo que pasó cuando decidiste cogerlas ☘️");
         }
         if (llaves == true){
-            System.out.println("- Llaves 🗝️, recuerda lo que paso cuando decidiste cogerlas ☘️");
+            System.out.println("- Llaves 🗝️, recuerda lo que pasó cuando decidiste cogerlas ☘️");
         }
         if (linterna == false && hacha == false && maza == false && llaves == false){
             System.out.println("Tu inventario por el momento esta vacio 👜");
@@ -691,61 +691,16 @@ public class Proyecto_final {
     }
     public static void iniciar_musica_juego() {
         try {
-            // --- PARTE 1: MÚSICA DE FONDO ---
-            System.out.println("Intentando cargar música de fondo...");
             String ruta = "Sonidos\\Sonidos-en-un-Cementerio-de-noche-_1HH3pTx9tek_.wav";
 
-            File archivoFondo = new File(ruta);
-            if(archivoFondo.exists()){
-                AudioInputStream audio = AudioSystem.getAudioInputStream(archivoFondo);
-                musicaMenu = AudioSystem.getClip();
-                musicaMenu.open(audio);
-                musicaMenu.loop(Clip.LOOP_CONTINUOUSLY);
-                musicaMenu.start();
-            } else {
-                System.out.println("❌ ERROR: No encuentro el archivo de fondo: " + ruta);
-            }
-
-            // --- PARTE 2: EL SONIDO DEL CUERVO CADA 5 SEGUNDOS ---
-
-            ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
-
-            scheduler.scheduleAtFixedRate(() -> {
-                try {
-                    String rutaSonidoExtra = "Sonidos\\raven-call-72946 (mp3cut.net).wav";
-                    File archivoExtra = new File(rutaSonidoExtra);
-
-                    if (archivoExtra.exists()) {
-                        AudioInputStream audioExtra = AudioSystem.getAudioInputStream(archivoExtra);
-                        Clip clipExtra = AudioSystem.getClip();
-                        clipExtra.open(audioExtra);
-
-                        // 1. Iniciamos el sonido
-                        clipExtra.start();
-
-                        // 2. ¡IMPORTANTE! Esperamos a que termine de sonar antes de matar este hilo
-                        // Si no hacemos esto, Java puede cortar el sonido a medias.
-                        long duracionMicrosegundos = clipExtra.getMicrosecondLength();
-                        long duracionMilisegundos = duracionMicrosegundos / 1000;
-
-                        Thread.sleep(duracionMilisegundos + 100); // Esperamos lo que dura el audio
-
-                        // 3. Cerramos el clip para liberar memoria
-                        clipExtra.close();
-                        audioExtra.close();
-
-                    } else {
-                        System.out.println("❌ ERROR: No encuentro el sonido del cuervo: " + rutaSonidoExtra);
-                    }
-                } catch (Exception e) {
-                    System.out.println("Error en el sonido extra: " + e.getMessage());
-                    e.printStackTrace();
-                }
-            }, 0, 8, TimeUnit.SECONDS); // 0 espera inicial, repite cada 8 seg
+            AudioInputStream audio = AudioSystem.getAudioInputStream(new File(ruta));
+            musicaMenu = AudioSystem.getClip();
+            musicaMenu.open(audio);
+            musicaMenu.loop(Clip.LOOP_CONTINUOUSLY); // 🎵Repetir en bucle
+            musicaMenu.start();
 
         } catch (Exception e) {
-            System.out.println("No se pudo cargar la música de fondo: " + e.getMessage());
-            e.printStackTrace();
+            System.out.println("No se pudo cargar la música: " + e.getMessage());
         }
     }
     public static void sonido_pasos_arbol() {
