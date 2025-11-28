@@ -766,7 +766,7 @@ public class Proyecto_final {
             clipArbol.open(audio);
             clipArbol.start();
 
-            //Pausar programa hasta que terine el audio
+            //Pausar programa hasta que termine el audio
             long duracionMicrosegundos = clipArbol.getMicrosecondLength();
             long duracionMilisegundos = duracionMicrosegundos / 1000;
             Thread.sleep(duracionMilisegundos + 100);
