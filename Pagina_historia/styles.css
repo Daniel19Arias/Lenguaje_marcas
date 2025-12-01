@@ -84,8 +84,7 @@ video {
     width: 80%; /* me aseguro que en los moviles se vea al 80 */
     max-width: 500px; /* Definimos un tamaño maximo para que no sea enorme en escritorio */
     margin: 0 auto; /* Centramos el contenedor */
-    /* Añadido: Establecer el aspect-ratio para mantener la proporción cuadrada en el contenedor */
-    /* Esto es clave para el truco de padding-bottom si no usas 'aspect-ratio', pero lo simplificaremos con max-width y unidades relativas */
+   
 }
 
 #carousel {
