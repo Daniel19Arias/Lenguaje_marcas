@@ -8,29 +8,10 @@ body {
     align-items: center;
     /* Ponemos todo el contenido centrado uno debajo de otro */
     padding-top: 30px; 
-   min-height: 100vh; 
+    min-height: 100vh; 
    /* Asegura que el body ocupe el 100% de la altura de la pantalla y asi el footer va abajo*/
 }
-.logo-link{
-    text-decoration: none;
-}
-.logo{
-    display: flex;
-    height: auto;
-    position: absolute;
-    top: 20%;
-    left: 30px;
-}
-.logo img{
-    width: 100px;
-    height: auto;
-    filter: drop-shadow(0 0 5px #00FF80);
-    transition: transform 0.3;
-}
-.logo img:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 10px #e027e6)
-}
+
 
 h2 {
     /*titulo del lore*/
